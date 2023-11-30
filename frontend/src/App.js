@@ -64,7 +64,7 @@ function App() {
               onChange={changeHandler}
               value={value}
             />
-            <button type="submit">확인.</button>
+            <button type="submit">확인.zz</button>
           </form>
         </div>
       </header>
