@@ -47,7 +47,7 @@ app.post('/api/value', function (req, res, next) {
             else
                 return res.json({ success: true, value: req.body.value })
         })
-})
+}) 
 
 app.listen(5000, () => {
     console.log('애플리케이션이 5000번 포트에서 시작되었습니다.')
