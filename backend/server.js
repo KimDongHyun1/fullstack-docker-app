@@ -42,10 +42,14 @@ app.post('/api/value', function (req, res, next) {
     //데이터베이스에 값 넣어주기
     db.pool.query(`INSERT INTO lists (value) VALUES("${req.body.value}")`,
         (err, results, fileds) => {
-            if (err)
-                return res.status(500).send(err)
-            else
-                return res.json({ success: true, value: req.body.value })
+            if (err) {
+                console.log("err", err)
+;                return res.status(500).send(err);
+            } else {
+                console.log("success", req.body.value);
+                return res.json({ success: true, value: req.body.value });
+            }       
+                
         })
 }) 
 
